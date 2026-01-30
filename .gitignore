@@ -1,0 +1,13 @@
+
+# binarios
+job-runner
+
+# build
+/build/
+
+# editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
