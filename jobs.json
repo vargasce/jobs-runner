@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "name": "Proccess 1",
+      "command": "/bin/echo proccess_1",
+      "timeout": "",
+      "path": "./"
+    },
+    {
+      "name": "Proccess 2",
+      "command": "/bin/echo proccess_2",
+      "timeout": "",
+      "path": "./"
+    },
+    {
+      "name": "Proccess 3",
+      "command": "/bin/echo proccess_3",
+      "timeout": "",
+      "path": "./"
+    }
+  ]
+}
