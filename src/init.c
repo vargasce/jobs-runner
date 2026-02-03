@@ -1,36 +1,37 @@
 #include "../includes/init.h"
+#include "../includes/config.h"
 #include "../includes/job.h"
-#include "../includes/utils.h"
-#include <stdio.h>
 
-static int job_id = 1;
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <unistd.h>
 
 int init_proccess() {
-  FILE *file = fopen("jobs.conf", "r");
-  if (!file) {
-    perror("jobs.conf");
-    return 1;
+
+  JobList list = load_config("jobs.json");
+
+  printf("Cantidad de elementos: %ld \n", list.count);
+
+  for (size_t i = 0; i < list.count; i++) {
+    printf("job: %s \n", list.jobs[i].name);
+
+    RunningJob rj;
+    rj.job = &list.jobs[i];
+    rj.pid = run_job(list.jobs[i].command);
+    rj.start = time(NULL);
+
+    int status;
+    waitpid(rj.pid, &status, 0);
+
+    int exit_code = -1;
+    if (WIFEXITED(status))
+      exit_code = WEXITSTATUS(status);
+
+    printf("[%d] Job '%s' finished with exit code: %d\n", rj.pid, rj.job->name,
+           exit_code);
   }
-
-  char command[1024];
-  int exit_code;
-
-  while (fgets(command, sizeof(command), file)) {
-    trim_str_newline(command);
-
-    if (command[0] == '\0')
-      continue;
-
-    printf("[%d] Running job: %s", job_id, command);
-
-    exit_code = run_job(command);
-
-    printf("[%d] Job finished with exit code: %d\n", job_id, exit_code);
-
-    job_id++;
-  }
-
-  fclose(file);
 
   return 0;
 }

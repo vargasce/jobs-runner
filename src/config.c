@@ -1,10 +1,10 @@
-#include <cjson/cJSON.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #include "../includes/config.h"
 #include "../includes/utils.h"
+#include "../includes/cJSON.h"
 
 static char *read_file(const char *path) {
   FILE *file = fopen(path, "r");
