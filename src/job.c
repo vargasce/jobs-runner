@@ -1,3 +1,5 @@
+#include "../includes/config.h"
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/wait.h>

@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "../includes/cJSON.h"
 #include "../includes/config.h"
 #include "../includes/utils.h"
-#include "../includes/cJSON.h"
 
 static char *read_file(const char *path) {
   FILE *file = fopen(path, "r");
@@ -92,4 +92,5 @@ void clean_job(JobList *list) {
   }
 
   free(list->jobs);
+  printf("Free jobs memory. \n");
 }
