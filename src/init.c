@@ -19,15 +19,28 @@ void handle_sigint(int sig) {
   stop_requested = 1;
 }
 
+static void init_handle_sigint() {
+  struct sigaction sa = {0};
+  sa.sa_handler = handle_sigint;
+  sigemptyset(&sa.sa_mask);
+  sa.sa_flags = 0;
+
+  sigaction(SIGINT, &sa, NULL);
+}
+
+static void kill_process(RunningJob *rj) {
+  kill(rj->pid, SIGTERM);
+  sleep(1);
+  kill(rj->pid, SIGKILL);
+  waitpid(rj->pid, NULL, 0);
+}
+
 static int wait_job_with_timeout(RunningJob *rj) {
   int status;
   int exit_code = -1;
 
   if (stop_requested) {
-    kill(rj->pid, SIGTERM);
-    sleep(1);
-    kill(rj->pid, SIGKILL);
-    waitpid(rj->pid, NULL, 0);
+    kill_process(rj);
     return 130;
   }
 
@@ -35,7 +48,6 @@ static int wait_job_with_timeout(RunningJob *rj) {
     pid_t ret = waitpid(rj->pid, &status, WNOHANG);
 
     if (ret == rj->pid) {
-      printf("terminó solo. \n");
       if (WIFEXITED(status))
         exit_code = WEXITSTATUS(status);
       else if (WIFSIGNALED(status))
@@ -48,14 +60,11 @@ static int wait_job_with_timeout(RunningJob *rj) {
     if (rj->job->timeout > 0) {
       time_t elapsed = time(NULL) - rj->start;
 
-      if (elapsed >= rj->job->timeout) {
-        // timeout alcanzado
-        kill(rj->pid, SIGTERM);
-        sleep(1); // grace period
-        kill(rj->pid, SIGKILL);
-
-        waitpid(rj->pid, &status, 0);
-        return 124; // código típico de timeout
+      if (elapsed >= rj->job->timeout) { // timeout alcanzado
+        if (waitpid(rj->pid, NULL, WNOHANG) == 0) {
+          kill_process(rj);
+        }
+        return 124; // código timeout
       }
     }
 
@@ -65,13 +74,7 @@ static int wait_job_with_timeout(RunningJob *rj) {
 }
 
 int init_proccess() {
-
-  struct sigaction sa = {0};
-  sa.sa_handler = handle_sigint;
-  sigemptyset(&sa.sa_mask);
-  sa.sa_flags = 0;
-
-  sigaction(SIGINT, &sa, NULL);
+  init_handle_sigint();
 
   JobList list = load_config("jobs.json");
 
