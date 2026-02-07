@@ -1,7 +1,8 @@
+#include <stddef.h>
 #define _POSIX_C_SOURCE 200809L
 
-#include "../includes/init.h"
 #include "../includes/config.h"
+#include "../includes/init.h"
 #include "../includes/job.h"
 
 #include <signal.h>
@@ -35,44 +36,6 @@ static void kill_process(RunningJob *rj) {
   waitpid(rj->pid, NULL, 0);
 }
 
-static int wait_job_with_timeout(RunningJob *rj) {
-  int status;
-  int exit_code = -1;
-
-  if (stop_requested) {
-    kill_process(rj);
-    return 130;
-  }
-
-  while (1) {
-    pid_t ret = waitpid(rj->pid, &status, WNOHANG);
-
-    if (ret == rj->pid) {
-      if (WIFEXITED(status))
-        exit_code = WEXITSTATUS(status);
-      else if (WIFSIGNALED(status))
-        exit_code = 128 + WTERMSIG(status);
-
-      return exit_code;
-    }
-
-    // no terminó aún
-    if (rj->job->timeout > 0) {
-      time_t elapsed = time(NULL) - rj->start;
-
-      if (elapsed >= rj->job->timeout) { // timeout alcanzado
-        if (waitpid(rj->pid, NULL, WNOHANG) == 0) {
-          kill_process(rj);
-        }
-        return 124; // código timeout
-      }
-    }
-
-    struct timespec ts = {.tv_sec = 0, .tv_nsec = 100 * 1000 * 1000};
-    nanosleep(&ts, NULL);
-  }
-}
-
 int init_proccess() {
   init_handle_sigint();
 
@@ -80,33 +43,77 @@ int init_proccess() {
 
   printf("Cantidad de jobs: %ld \n", list.count);
 
-  for (size_t i = 0; i < list.count; i++) {
+  RunningJob running[MAX_PARALLEL];
+  size_t runing_count = 0;
+  size_t next_job = 0;
 
-    if (stop_requested) {
-      printf("Ctrl+C recibido. Terminando jobs...\n");
-      break;
+  while ((next_job < list.count || runing_count > 0) && !stop_requested) {
+
+    while (next_job < list.count && runing_count < MAX_PARALLEL) {
+      RunningJob *rj = &running[runing_count];
+
+      rj->job = &list.jobs[next_job];
+      rj->pid = run_job(rj->job->command);
+      rj->start = time(NULL);
+
+      printf("[START] %s pid=%d\n", rj->job->name, rj->pid);
+
+      runing_count++;
+      next_job++;
     }
 
-    printf("job: %s \n", list.jobs[i].name);
+    for (size_t i = 0; i < runing_count; i++) {
+      int status;
+      pid_t ret = waitpid(running[i].pid, &status, WNOHANG);
 
-    RunningJob rj;
-    rj.job = &list.jobs[i];
-    rj.pid = run_job(list.jobs[i].command);
-    rj.start = time(NULL);
+      // Sigue ejecutando
+      if (ret == 0) {
+        // chequeo timeout
+        if (running[i].job->timeout > 0) {
+          time_t elapsed = time(NULL) - running[i].start;
+          if (elapsed >= running[i].job->timeout) {
+            printf("[TIMEOUT] %s pid=%d\n", running[i].job->name,
+                   running[i].pid);
 
-    int exit_code = wait_job_with_timeout(&rj);
+            kill_process(&running[i]);
 
-    time_t end = time(NULL);
+            running[i] = running[runing_count - 1];
+            runing_count--;
+            i--;
+          }
+        }
+        continue;
+      }
 
-    if (stop_requested) {
-      printf("Job interrumpido por Ctrl+C\n");
-    } else {
-      printf("[%d] Job '%s' finished with exit code: %d in %lds\n", rj.pid,
-             rj.job->name, exit_code, end - rj.start);
+      // Terminó
+      if (ret == running[i].pid) {
+        int exit_code;
+
+        if (WIFEXITED(status))
+          exit_code = WEXITSTATUS(status);
+        else
+          exit_code = 128 + WTERMSIG(status);
+
+        printf("[END] %s pid=%d exit=%d\n", running[i].job->name,
+               running[i].pid, exit_code);
+
+        running[i] = running[runing_count - 1];
+        runing_count--;
+        i--;
+      }
+    }
+
+    struct timespec ts = {.tv_sec = 0, .tv_nsec = 100 * 1000 * 1000};
+    nanosleep(&ts, NULL);
+
+    if (stop_requested) { // press Ctrl + c
+      for (size_t i = 0; i < runing_count; i++) {
+        kill_process(&running[i]);
+      }
     }
   }
 
   clean_job(&list);
 
-  return 0;
+  return stop_requested ? 130 : 0;
 }

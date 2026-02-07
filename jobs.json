@@ -2,19 +2,37 @@
   "jobs": [
     {
       "name": "Proccess 1",
-      "command": "/bin/echo proccess_1",
+      "command": "random_sleep.sh",
       "timeout": "",
       "path": "./"
     },
     {
       "name": "Proccess 2",
-      "command": "/bin/echo proccess_2",
+      "command": "random_sleep.sh",
       "timeout": "",
       "path": "./"
     },
     {
       "name": "Proccess 3",
-      "command": "/bin/echo proccess_3",
+      "command": "random_sleep.sh",
+      "timeout": "",
+      "path": "./"
+    },
+    {
+      "name": "Proccess 4",
+      "command": "random_sleep.sh",
+      "timeout": "",
+      "path": "./"
+    },
+    {
+      "name": "Proccess 5",
+      "command": "random_sleep.sh",
+      "timeout": "",
+      "path": "./"
+    },
+    {
+      "name": "Proccess 6",
+      "command": "random_sleep.sh",
       "timeout": "",
       "path": "./"
     }
