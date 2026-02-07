@@ -1,38 +1,20 @@
 {
   "jobs": [
     {
-      "name": "Proccess 1",
-      "command": "random_sleep.sh",
+      "name": "Clean System Debian",
+      "command": "/home/javo/Scripts/clean-debian/clean-debian.sh",
       "timeout": "",
       "path": "./"
     },
     {
       "name": "Proccess 2",
-      "command": "random_sleep.sh",
+      "command": "/home/javo/Scripts/random-sleep/random_sleep.sh",
       "timeout": "",
       "path": "./"
     },
     {
       "name": "Proccess 3",
-      "command": "random_sleep.sh",
-      "timeout": "",
-      "path": "./"
-    },
-    {
-      "name": "Proccess 4",
-      "command": "random_sleep.sh",
-      "timeout": "",
-      "path": "./"
-    },
-    {
-      "name": "Proccess 5",
-      "command": "random_sleep.sh",
-      "timeout": "",
-      "path": "./"
-    },
-    {
-      "name": "Proccess 6",
-      "command": "random_sleep.sh",
+      "command": "/home/javo/Scripts/random-sleep/random_sleep.sh",
       "timeout": "",
       "path": "./"
     }
