@@ -1,167 +1,56 @@
+Sleeping for 1 seconds...
+Sleeping for 1 seconds...
 == Limpieza de paquetes ==
-Sleeping for 1 seconds...
-Sleeping for 1 seconds...
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-Leyendo lista de paquetes...Done
 Done
-
-Creando árbol de dependencias...
-Leyendo la información de estado...
-0 actualizados, 0 nuevos se instalarán, 0 para eliminar y 1 no actualizados.
-W: El objetivo Packages (contrib/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (contrib/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (contrib/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (contrib/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (contrib/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (contrib/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (contrib/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11 (contrib/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11 (contrib/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11-icons-small (contrib/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11-icons (contrib/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (contrib/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (contrib/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (contrib/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (contrib/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (contrib/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (contrib/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (contrib/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11 (contrib/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11 (contrib/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11-icons-small (contrib/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11-icons (contrib/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (non-free/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (non-free/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (non-free/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (non-free/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (non-free/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (non-free/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (non-free/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11 (non-free/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11 (non-free/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11-icons-small (non-free/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11-icons (non-free/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (non-free-firmware/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (non-free-firmware/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (non-free-firmware/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Translations (non-free-firmware/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11 (non-free-firmware/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11 (non-free-firmware/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11-icons-small (non-free-firmware/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo DEP-11-icons (non-free-firmware/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:1 y /etc/apt/sources.list.d/contrib.list:1
-W: El objetivo Packages (contrib/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (contrib/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (contrib/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (contrib/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (contrib/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (contrib/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (contrib/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11 (contrib/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11 (contrib/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11-icons-small (contrib/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11-icons (contrib/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (contrib/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (contrib/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (contrib/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (contrib/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (contrib/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (contrib/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (contrib/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11 (contrib/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11 (contrib/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11-icons-small (contrib/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11-icons (contrib/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (non-free/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (non-free/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (non-free/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (non-free/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (non-free/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (non-free/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (non-free/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11 (non-free/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11 (non-free/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11-icons-small (non-free/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11-icons (non-free/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (non-free-firmware/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (non-free-firmware/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (non-free-firmware/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Translations (non-free-firmware/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11 (non-free-firmware/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11 (non-free-firmware/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11-icons-small (non-free-firmware/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo DEP-11-icons (non-free-firmware/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:2 y /etc/apt/sources.list.d/contrib.list:2
-W: El objetivo Packages (contrib/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (contrib/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (contrib/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (contrib/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (contrib/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (contrib/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (contrib/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11 (contrib/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11 (contrib/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11-icons-small (contrib/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11-icons (contrib/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (contrib/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (contrib/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (contrib/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (contrib/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (contrib/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (contrib/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (contrib/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11 (contrib/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11 (contrib/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11-icons-small (contrib/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11-icons (contrib/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (non-free/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (non-free/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (non-free/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (non-free/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (non-free/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (non-free/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (non-free/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11 (non-free/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11 (non-free/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11-icons-small (non-free/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11-icons (non-free/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (non-free-firmware/binary-amd64/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (non-free-firmware/binary-i386/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Packages (non-free-firmware/binary-all/Packages) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es_ES) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (non-free-firmware/i18n/Translation-es_AR) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo Translations (non-free-firmware/i18n/Translation-en) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11 (non-free-firmware/dep11/Components-amd64.yml) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11 (non-free-firmware/dep11/Components-all.yml) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11-icons-small (non-free-firmware/dep11/icons-48x48.tar) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-W: El objetivo DEP-11-icons (non-free-firmware/dep11/icons-64x64.tar) está configurado varias veces en /etc/apt/sources.list:3 y /etc/apt/sources.list.d/contrib.list:3
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-Leyendo lista de paquetes...
-Creando árbol de dependencias...
-Leyendo la información de estado...
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
+Done
+W: https://packages.microsoft.com/repos/azure-cli/dists/bookworm/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
 == Limpieza de journals (7 días) ==
 Vacuuming done, freed 0B of archived journals from /run/log/journal.
 Vacuuming done, freed 0B of archived journals from /var/log/journal/3196ea7c43794978a2ce77f276584d11.
 Vacuuming done, freed 0B of archived journals from /var/log/journal.
 == Limpieza de /tmp ==
-find: ‘/tmp/.mount_nvimBpCHBd’: Permiso denegado
 Cantidad de jobs: 3 
-[START] Clean System Debian pid=19996
-[START] Proccess 2 pid=19997
-[START] Proccess 3 pid=19998
-[END] Proccess 2 pid=19997 exit=0
-[END] Proccess 3 pid=19998 exit=0
-[END] Clean System Debian pid=19996 exit=1
+[START] Clean System Debian pid=24914
+[START] Proccess 2 pid=24915
+[START] Proccess 3 pid=24916
+[END] Proccess 2 pid=24915 exit=0
+[END] Proccess 3 pid=24916 exit=0
+[END] Clean System Debian pid=24914 exit=1
+
+=== JOB RUN SUMMARY ===
+Total jobs: 3
+Succeeded:  2
+Failed:     1
+Timeouts:   0
+Killed:     0
+Total time: 3s
+=======================
+Free jobs memory. 
+Sleeping for 1 seconds...
+Sleeping for 1 seconds...
+== Limpieza de paquetes ==
+Done
+Done
+W: https://packages.microsoft.com/repos/azure-cli/dists/bookworm/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+== Limpieza de journals (7 días) ==
+Vacuuming done, freed 0B of archived journals from /var/log/journal.
+Vacuuming done, freed 0B of archived journals from /var/log/journal/3196ea7c43794978a2ce77f276584d11.
+Vacuuming done, freed 0B of archived journals from /run/log/journal.
+== Limpieza de /tmp ==
+Cantidad de jobs: 3 
+[START] Clean System Debian pid=25776
+[START] Proccess 2 pid=25777
+[START] Proccess 3 pid=25778
+[END] Proccess 2 pid=25777 exit=0
+[END] Proccess 3 pid=25778 exit=0
+[END] Clean System Debian pid=25776 exit=1
+
+=== JOB RUN SUMMARY ===
+Total jobs: 3
+Succeeded:  2
+Failed:     1
+Timeouts:   0
+Killed:     0
+Total time: 2s
+=======================
 Free jobs memory. 

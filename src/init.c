@@ -36,7 +36,12 @@ static void kill_process(RunningJob *rj) {
   waitpid(rj->pid, NULL, 0);
 }
 
+static void init_metric(Metrics *m) { m->start = time(NULL); }
+
 int init_proccess() {
+  Metrics metric = {0};
+  init_metric(&metric);
+
   init_handle_sigint();
 
   JobList list = load_config("jobs.json");
@@ -50,6 +55,8 @@ int init_proccess() {
   while ((next_job < list.count || runing_count > 0) && !stop_requested) {
 
     while (next_job < list.count && runing_count < MAX_PARALLEL) {
+      metric.total_jobs++;
+
       RunningJob *rj = &running[runing_count];
 
       rj->job = &list.jobs[next_job];
@@ -86,8 +93,9 @@ int init_proccess() {
       }
 
       // Terminó
+      int exit_code;
+
       if (ret == running[i].pid) {
-        int exit_code;
 
         if (WIFEXITED(status))
           exit_code = WEXITSTATUS(status);
@@ -101,6 +109,15 @@ int init_proccess() {
         runing_count--;
         i--;
       }
+
+      if (exit_code == 0)
+        metric.success++;
+      else if (exit_code == 124)
+        metric.time_out++;
+      else if (exit_code == 130)
+        metric.killed++;
+      else
+        metric.failed++;
     }
 
     struct timespec ts = {.tv_sec = 0, .tv_nsec = 100 * 1000 * 1000};
@@ -112,6 +129,17 @@ int init_proccess() {
       }
     }
   }
+
+  time_t end = time(NULL);
+
+  printf("\n=== JOB RUN SUMMARY ===\n");
+  printf("Total jobs: %ld\n", metric.total_jobs);
+  printf("Succeeded:  %ld\n", metric.success);
+  printf("Failed:     %ld\n", metric.failed);
+  printf("Timeouts:   %ld\n", metric.time_out);
+  printf("Killed:     %ld\n", metric.killed);
+  printf("Total time: %lds\n", end - metric.start);
+  printf("=======================\n");
 
   clean_job(&list);
 

@@ -17,6 +17,15 @@ typedef struct {
   time_t start;
 } RunningJob;
 
+typedef struct {
+  size_t total_jobs;
+  size_t failed;
+  size_t time_out;
+  size_t success;
+  size_t killed;
+  time_t start;
+} Metrics;
+
 JobList load_config(const char *path);
 void clean_job(JobList *jobs);
 
