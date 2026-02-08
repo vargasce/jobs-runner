@@ -87,6 +87,7 @@ int init_proccess() {
             running[i] = running[runing_count - 1];
             runing_count--;
             i--;
+            metric.time_out++;
           }
         }
         continue;
@@ -112,8 +113,6 @@ int init_proccess() {
 
       if (exit_code == 0)
         metric.success++;
-      else if (exit_code == 124)
-        metric.time_out++;
       else if (exit_code == 130)
         metric.killed++;
       else
