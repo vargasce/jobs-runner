@@ -11,3 +11,4 @@ job-runner
 
 # OS
 .DS_Store
+logs/runner.log

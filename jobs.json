@@ -2,19 +2,19 @@
   "jobs": [
     {
       "name": "Clean System Debian",
-      "command": "/home/javo/Scripts/clean-debian/clean-debian.sh",
+      "command": "/home/toro/Scripts/clean-debian/clean-debian.sh",
       "timeout": "",
       "path": "./"
     },
     {
       "name": "Proccess 2",
-      "command": "/home/javo/Scripts/random-sleep/random_sleep.sh",
+      "command": "/home/toro/Scripts/random-sleep/random_sleep.sh",
       "timeout": "",
       "path": "./"
     },
     {
       "name": "Proccess 3",
-      "command": "/home/javo/Scripts/random-sleep/random_sleep.sh",
+      "command": "/home/toro/Scripts/random-sleep/random_sleep.sh",
       "timeout": "",
       "path": "./"
     }

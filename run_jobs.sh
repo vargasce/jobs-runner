@@ -1,8 +1,8 @@
 #!/bin/sh
 
-JOB_RUNNER="/home/javo/source/job-runner-c/job-runner"
-CONFIG="/home/javo/source/job-runner-c/jobs.json"
-LOGDIR="/home/javo/source/job-runner-c/logs"
+JOB_RUNNER="/home/toro/source/job-runner-c/job-runner"
+CONFIG="/home/toro/source/job-runner-c/jobs.json"
+LOGDIR="/home/toro/source/job-runner-c/logs"
 
 mkdir -p "$LOGDIR"
 
